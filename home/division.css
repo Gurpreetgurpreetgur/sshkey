@@ -1,0 +1,55 @@
+/* Content Section Styles */
+.content-section {
+    padding: 50px 20px;
+    background-color: #f8f8f8; /* Light background for contrast */
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Divisions container */
+.content-divisions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Individual Division Styles */
+.division {
+    background-color: #fff;
+    padding: 10px;
+    width: 30%; /* Each division takes 32% width of the container */
+    height: 100%; /* Full height of the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Make sure padding and border are included in the width */
+}
+
+.division2 {
+    background-color: #fff;
+    padding: 10px;
+    width: 50%; /* Each division takes 32% width of the container */
+    height: 100%; /* Full height of the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Make sure padding and border are included in the width */
+}
+.division3{
+    background-color: #fff;
+    padding: 10px;
+    width: 18%; /* Each division takes 32% width of the container */
+    height: 100%; /* Full height of the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Make sure padding and border are included in the width */
+}
+
+
+

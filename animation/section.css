@@ -1,0 +1,73 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling for the Section */
+section {
+    width: 100%;
+    padding-top:80px;
+    background-color: #f4f4f4;
+}
+
+/* Three Column Layout */
+.three-column-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between columns */
+}
+
+/* Each Column Styling */
+.column {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header inside each column */
+.column h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* Text inside each column */
+.column p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .three-column-section {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .column {
+        margin-bottom: 20px; /* Add space between columns on smaller screens */
+    }
+
+    /* Adjust text size for smaller screens */
+    .column h2 {
+        font-size: 1.4rem;
+    }
+
+    .column p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .column h2 {
+        font-size: 1.2rem; /* Adjust header size */
+    }
+
+    .column p {
+        font-size: 0.8rem; /* Adjust text size */
+    }
+}

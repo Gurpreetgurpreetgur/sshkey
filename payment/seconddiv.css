@@ -1,0 +1,234 @@
+
+/* Solar System Styles */
+.solar-system {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    width: 44vw; /* 30% of the viewport width */
+    height: 30vw; /* 30% of the viewport height */
+    background-image: url('image/space.jpg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Ensures the image is centered */
+    border-radius: 8px; /* Round the corners for a smoother look */
+}
+
+.solar-system::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay with transparency (0.4) */
+    border-radius: 8px; /* Matches the container's rounded corners */
+}
+
+/* Sun Styling */
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15%; /* Make the sun responsive (15% of the solar system width) */
+    height: 15%; /* Make the sun responsive (15% of the solar system height) */
+    background-color: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.6);
+}
+
+/* Planet and orbit styles */
+/* Planet and orbit styles */
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 50%; /* Makes the div a circle */
+    width: 100%; /* Ensures it fills the container */
+    height: 100%; /* Ensures it fills the container */
+}
+
+.orbit1 {
+    width: 20%; /* 25% of the solar system width */
+    height: 20%; /* 25% of the solar system height */
+    animation: orbit1 5s infinite;
+}
+
+.orbit2 {
+    width: 25%; /* 35% of the solar system width */
+    height: 25%; /* 35% of the solar system height */
+    animation: orbit2 8s infinite;
+}
+
+.orbit3 {
+    width: 45%; /* 50% of the solar system width */
+    height: 45%; /* 50% of the solar system height */
+    animation: orbit3 12s infinite;
+}
+
+.orbit4 {
+    width: 55%; /* 60% of the solar system width */
+    height: 55%; /* 60% of the solar system height */
+    animation: orbit4 15s infinite;
+}
+
+.orbit5 {
+    width: 65%; /* 75% of the solar system width */
+    height: 65%; /* 75% of the solar system height */
+    animation: orbit5 18s infinite;
+}
+
+/* Color planets */
+.planet1 {
+    background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(139, 0, 0, 1) 70%); /* Red planet with a gradient */
+    width: 12%;
+    height: 12%;
+    border-radius: 50%; /* Ensure circular shape */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7), inset 0 4px 15px rgba(255, 255, 255, 0.2); /* 3D shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for planet1 */
+.planet1:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7), inset 0 6px 25px rgba(255, 255, 255, 0.4);
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.planet2 {
+    background: radial-gradient(circle, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 139, 1) 70%); /* Blue planet with gradient */
+    width: 15%;
+    height: 15%;
+    border-radius: 50%; /* Ensure circular shape */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7), inset 0 4px 15px rgba(255, 255, 255, 0.2); /* 3D shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for planet2 */
+.planet2:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7), inset 0 6px 25px rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.planet3 {
+    background: radial-gradient(circle, rgba(0, 255, 0, 1) 0%, rgba(0, 128, 0, 1) 70%); /* Green planet with gradient */
+    width: 18%;
+    height: 18%;
+    border-radius: 50%; /* Ensure circular shape */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7), inset 0 4px 15px rgba(255, 255, 255, 0.2); /* 3D shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for planet3 */
+.planet3:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7), inset 0 6px 25px rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.planet4 {
+    background: radial-gradient(circle, rgba(255, 165, 0, 1) 0%, rgba(255, 140, 0, 1) 70%); /* Orange planet with gradient */
+    width: 20%;
+    height: 20%;
+    border-radius: 50%; /* Ensure circular shape */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7), inset 0 4px 15px rgba(255, 255, 255, 0.2); /* 3D shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for planet4 */
+.planet4:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7), inset 0 6px 25px rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.planet5 {
+    background: radial-gradient(circle, rgba(139, 69, 19, 1) 0%, rgba(85, 53, 10, 1) 70%); /* Brown planet with a gradient */
+    width: 22%;
+    height: 22%;
+    border-radius: 50%; /* Ensure circular shape */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7), inset 0 4px 15px rgba(255, 255, 255, 0.2); /* 3D shadow with light reflection */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth shadow and scale transition */
+}
+
+/* Hover effect for a more pronounced 3D look */
+.planet5:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7), inset 0 6px 25px rgba(255, 255, 255, 0.4); /* Darker shadow on hover */
+    transform: scale(1.1); /* Slightly scale up the planet to create a popping effect */
+}
+
+/* Planet orbit animations */
+@keyframes orbit1 {
+    0% { transform: rotate(0deg) translateX(45px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(45px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+    0% { transform: rotate(0deg) translateX(75px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+}
+
+@keyframes orbit3 {
+    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes orbit4 {
+    0% { transform: rotate(0deg) translateX(125px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(125px) rotate(-360deg); }
+}
+
+@keyframes orbit5 {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/* Responsive Design for Solar System */
+@media (max-width: 768px) {
+    .solar-system {
+        width: 50vw; /* Make the solar system take 50% of the viewport width on smaller screens */
+        height: 50vh; /* Make the solar system take 50% of the viewport height */
+    }
+    
+    .sun {
+        width: 12%; /* Larger sun size */
+        height: 12%;
+    }
+
+    .orbit1, .orbit2, .orbit3, .orbit4, .orbit5 {
+        width: 30%; /* Increase orbit size */
+        height: 30%;
+    }
+
+    /* Adjust planet sizes on mobile screens */
+    .planet1, .planet2, .planet3, .planet4, .planet5 {
+        width: 8%; /* Adjust planet size for mobile screens */
+        height: 8%;
+    }
+}
+
+@media (max-width: 480px) {
+    .solar-system {
+        width: 70vw; /* Solar system takes 70% of the viewport width on very small screens */
+        height: 70vh; /* Solar system takes 70% of the viewport height */
+    }
+    
+    .sun {
+        width: 10%; /* Larger sun size */
+        height: 10%;
+    }
+
+    .orbit1, .orbit2, .orbit3, .orbit4, .orbit5 {
+        width: 35%; /* Increase orbit size further */
+        height: 35%;
+    }
+
+    /* Further increased planet sizes for small screens */
+    .planet1, .planet2, .planet3, .planet4, .planet5 {
+        width: 12%; /* Adjust planet size for smaller screens */
+        height: 12%;
+    }
+}

@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  background-color: #87CEEB;  /* Sky Blue */
+  padding: 10px 20px;  /* Adjusted padding to decrease header height */
+  display: flex;
+  justify-content: space-between;  /* Distribute space between left and right */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo - Left side */
+.logo-left h1 {
+  font-size: 1.6rem;  /* Reduced logo size */
+  color: white;
+  transition: font-size 0.3s ease;
+}
+
+.logo-left h1:hover {
+  font-size: 1.8rem;  /* Slightly increased hover size */
+}
+
+/* Navigation Links Centered */
+nav {
+  flex-grow: 1;  /* Make the nav section take up remaining space */
+  text-align: center;  /* Center the navigation links */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;  /* Center the links horizontally */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 12px;  /* Reduced margin between navigation items */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;  /* Slightly reduced font size */
+  transition: color 0.3s ease;
+}
+
+/* Active and hover link styles */
+.nav-links li a:hover, .nav-links li a.active {
+  color: #1E90FF; /* Dodger Blue */
+}
+
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  margin: 5px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  /* Hide the nav-links initially */
+  .nav-links {
+      display: none;
+      position: absolute;
+      top: 50px;  /* Adjusted to position below the header */
+      left: 0;
+      background-color: #87CEEB;
+      width: 100%;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show the nav-links when hamburger is clicked */
+  .nav-links.active {
+      display: flex;
+  }
+
+  /* Hamburger menu visible on small screens */
+  .hamburger {
+      display: block;
+  }
+
+  /* Animation for the hamburger menu (cross icon) */
+  .hamburger.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Adjust the logo size for mobile screens */
+  .logo-left h1 {
+      font-size: 1.4rem;  /* Reduced font size for mobile */
+  }
+  /* Center the links */
+  .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+  }
+}
+/* Logo - Right side */
+.logo-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Center the logo vertically */
+  width: 150px;  /* Set a specific width if necessary */
+ }
+
+.logo-img {
+  height: 50px;  /* Set the height of the logo image */
+  width: auto;   /* Maintain the aspect ratio */
+  display: block; /* Ensure it's visible */
+  
+}

@@ -1,0 +1,93 @@
+/* Reset some basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the carousel */
+.carousel-container {
+  position: relative;
+  width: 100%;  /* Carousel width */
+  height: 47vh; /* Adjust height as needed */
+  top: 15vh;
+  margin: 0 auto; /* Center the carousel */
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper for the carousel images */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slide container holding all the images */
+.carousel-slide {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Smooth slide effect */
+}
+
+/* Styling for the images */
+.carousel-slide img {
+  width: 33.33%; /* Show 3 images at a time */
+  height: 100%;  /* Ensure all images have the same height */
+  object-fit: cover; /* Ensure images cover the container */
+  object-position: center; /* Center the image */
+  opacity: 0.5; /* Make side images slightly dim */
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Focus on center image */
+.carousel-slide img.focus {
+  transform: scale(1.1); /* Zoom center image */
+  opacity: 1; /* Make center image fully visible */
+}
+
+/* Optional navigation buttons */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+button.prev {
+  left: 20px;
+}
+
+button.next {
+  right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 50vh;
+  }
+
+  .carousel-slide img {
+    width: 50%;  /* Show 2 images at a time on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 45vh;
+  }
+
+  .carousel-slide img {
+    width: 100%; /* Show 1 image at a time on small screens */
+    opacity: 1;  /* Make all images visible */
+  }
+}

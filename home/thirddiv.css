@@ -1,0 +1,51 @@
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin: 10px 0;
+}
+
+.social-link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    display: inline-block;
+    padding: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #0073e6; /* Change color on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.social-link::before {
+    content: "🔗"; /* Add an icon before the text */
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover::before {
+    transform: rotate(15deg); /* Rotate the icon on hover */
+}
+
+.nav-list li:nth-child(1) .social-link {
+    transition-delay: 0.1s;
+}
+
+.nav-list li:nth-child(2) .social-link {
+    transition-delay: 0.2s;
+}
+
+.nav-list li:nth-child(3) .social-link {
+    transition-delay: 0.3s;
+}
+
+.nav-list li:nth-child(4) .social-link {
+    transition-delay: 0.4s;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Content Section</title>
+     <!-- Link to the external CSS file -->
+     <link rel="stylesheet" href="division.css"> <!-- External CSS -->
+     <link rel="stylesheet" href="firstdiv.css"> <!-- External CSS -->
+     <link rel="stylesheet" href="seconddiv.css"> <!-- External CSS -->
+
+
+
+</head>
+<body>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <h2>Content Section Title</h2>
+        <p>Some introductory text or description goes here.</p>
+
+        <!-- Divisions container -->
+        <div class="content-divisions">
+            <!-- First Division -->
+            <div class="division">
+                <div class="container">
+                    <h2>Book Recommendation Form</h2>
+                    <form id="bookForm" onsubmit="return handleSubmit(event)">
+                        <!-- Mandatory Fields -->
+                        <div class="form-group">
+                            <label for="Name">Name: <span class="required">*</span></label>
+                            <input type="text" id="Name" name="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email: <span class="required">*</span></label>
+                            <input type="email" id="Email" name="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="UID">UID/E-code: <span class="required">*</span></label>
+                            <input type="text" id="UID" name="UID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Department">Department/Institution: <span class="required">*</span></label>
+                            <input type="text" id="Department" name="Department" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Title">Title: <span class="required">*</span></label>
+                            <input type="text" id="Title" name="Title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Author">Author: <span class="required">*</span></label>
+                            <input type="text" id="Author" name="Author" required>
+                        </div>
+            
+                        <!-- Optional Fields -->
+                        <div class="form-group">
+                            <label for="Publisher">Publisher:</label>
+                            <input type="text" id="Publisher" name="Publisher">
+                        </div>
+                        <div class="form-group">
+                            <label for="Edition">Edition:</label>
+                            <input type="text" id="Edition" name="Edition">
+                        </div>
+                        <div class="form-group">
+                            <label for="Cost">Approx Cost:</label>
+                            <input type="text" id="Cost" name="Cost">
+                        </div>
+                        <div class="form-group">
+                            <label for="Reason">Why do you recommend this book?</label>
+                            <textarea id="Reason" name="Reason"></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+            
+                    <!-- Loading Spinner and Messages -->
+                    <div id="loading">
+                        <div id="spinner"></div>
+                        <p>Submitting your recommendation...</p>
+                    </div>
+                    <div id="message" class="message"></div>
+                    <div id="error" class="error"></div>
+                </div>
+          </div>
+
+            <!-- Second Division -->
+            <div class="division2">
+                <div class="solar-system">
+                    <div class="sun"></div>
+                    <div class="planet orbit1">
+                        <div class="planet1"></div>
+                    </div>
+                    <div class="planet orbit2">
+                        <div class="planet2"></div>
+                    </div>
+                    <div class="planet orbit3">
+                        <div class="planet3"></div>
+                    </div>
+                    <div class="planet orbit4">
+                        <div class="planet4"></div>
+                    </div>
+                    <div class="planet orbit5">
+                        <div class="planet5"></div>
+                    </div>
+                </div>
+            
+            </div>
+
+            <!-- Third Division -->
+            <div class="division3">
+                <div class="division3">
+                    <ul class="nav-list">
+                        <li><a href="https://facebook.com" class="social-link" target="_blank">Facebook</a></li>
+                        <li><a href="https://twitter.com" class="social-link" target="_blank">Twitter</a></li>
+                        <li><a href="https://instagram.com" class="social-link" target="_blank">Instagram</a></li>
+                        <li><a href="https://linkedin.com" class="social-link" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- External JS file -->
+    <script src="form.js"></script>
+    <script src="solar.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>University Website</title>
+
+    <!-- Link to External CSS Files -->
+    <link rel="stylesheet" href="outline/corousel.css"> <!-- corousel CSS -->
+    <link rel="stylesheet" href="outline/header.css"> <!-- Global Styles -->
+    <link rel="stylesheet" href="outline/footer.css"> <!-- Global Styles -->
+    
+
+    <link rel="stylesheet" href="dbc/styles.css"> <!-- Global Styles -->
+    <link rel="stylesheet" href="dbc/section.css"> <!-- Link to External CSS -->
+    <link rel="stylesheet" href="dbc/division.css"> <!-- Link to External CSS -->
+    <link rel="stylesheet" href="dbc/firstdiv.css"> <!-- Link to External CSS -->
+    <link rel="stylesheet" href="dbc/seconddiv.css"> <!-- Link to External CSS -->
+</head>
+
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Carousel Section -->
+    <div id="corousel">
+        <!-- Directly add carousel content -->
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide">
+                    <img src="outline/image/a.jpg" alt="Image 1">
+                    <img src="outline/image/b.jpg" alt="Image 2">
+                    <img src="outline/image/c.jpg" alt="Image 3">
+                    <img src="outline/image/e.jpeg" alt="Image 4">
+                    <img src="outline/image/f.jpeg" alt="Image 5">
+                    <img src="outline/image/g.jpeg" alt="Image 6">
+                    <img src="outline/image/h.jpeg" alt="Image 7">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Content Placeholder -->
+<div id="content-placeholder"></div>
+
+
+    <!-- section Placeholder -->
+<div id="section-placeholder"></div>
+
+
+
+ <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to Load Content Dynamically -->
+    <script>
+        // Load the header dynamically
+        fetch('outline/header.html')  <!-- Adjust path as per server structure -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+      // Load the section dynamically
+      fetch('dbc/section.html')  //<!-- Adjust path as per server structure -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('section-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading content:', error));
+
+
+      
+          // Load the content dynamically
+       fetch('dbc/division.html')  //<!-- Adjust path as per server structure -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('content-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading content:', error));
+
+       // Load the footer dynamically
+        fetch('outline/footer.html') 
+        // <!-- Adjust path as per server structure -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <!-- External Script for Additional Functionality -->
+    <script src="outline/carousel.js"></script>
+
+
+    <script src="home/form.js"></script>
+    <script src="home/solar.js"></script>
+    
+     <!-- External JS file -->
+</body>
+
+</html>
